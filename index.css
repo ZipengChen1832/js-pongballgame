@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --paddle-color: white;
+    --ball-color: white;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+#score {
+    color: white;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 1rem;
+
+    font-size: 4rem;
+    justify-content: center;
+
+}
+
+#score1 {
+    padding-right: 1rem;
+    border-right: 2px solid white;
+}
+
+#score2 {
+    padding-left: 1rem;
+}
+
+
+#ball {
+    --x: 50;
+    --y: 50;
+
+    /* display: none; */
+    position: absolute;
+    top: calc(var(--y)*1vh);
+    left: calc(var(--x)*1vw);
+    transform: translate(-50%,-50%);
+
+    width: calc(1vw + 1rem);
+    height: calc(1vw + 1rem);
+    background-color: var(--ball-color);
+    border-radius: 50%;
+}
+
+.paddle {
+    --y: 50;
+
+    position: absolute;
+    width: 5px;
+    height: 15vh;
+    background-color: var(--paddle-color);
+    border-radius: 2rem;
+    
+    top: calc(var(--y)*1vh);
+    transform: translate(0,-50%);
+
+}
+
+#player-pad {
+    left: 10px;
+}
+
+#ai-pad {
+    right: 10px;
+}
